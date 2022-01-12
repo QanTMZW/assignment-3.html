@@ -1,0 +1,188 @@
+*{
+  margin:0;
+  padding:0;
+  font-family: 'Mochiy Pop P One', sans-serif;
+}
+.header{
+  min-height: 100vh;
+  width:100%;
+  background-image:url(https://i1.wp.com/www.reimarufiles.com/wp-content/uploads/2021/09/14310325_1224515640948808_4202540232594514085_o.jpg?fit=2048%2C1454&ssl=1);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img{
+  width: 150px;
+}
+.nav-links{
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a{
+  color: #fff;
+  text-decoration:none;
+  font-size: 13px;
+}
+.nav-links ul li::after{
+  content:'';
+  width:0%;
+  height: 2px;
+  background:#f44336;
+  display: block;
+  margin:auto;
+  transition:0.5s;
+}
+.nav-links ul li:hover::after{
+  width:100%;
+}
+.text-box{
+  border: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: :90%
+  color: #fff;
+  line-height:22px;
+  position:absolute;
+  bottom: 5px;
+   right: 10px;
+  text-align: center;
+  justify-content: space-between
+  vertical-align:bottom;
+
+}
+.text-box h1{
+  font-size: 62px;
+}
+.text-box p{
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: #fff
+}
+.hero-btn{
+  display: inline-block;
+  text-decoration: none;
+  color:#fff;
+  border:2px solid #fff;
+  padding:12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position:relative;
+  cursor: pointer;
+}
+.hero-btn:hover{
+  border:1px solid #f44336;
+  background:#f44336;
+  transition: 1s;
+}
+nav .fa{
+  display: none;
+}
+
+@media(max-width:700px) {
+  .text-box h1{
+    font-size: 10px;
+  }
+  .nav-links ul li{
+    display:block;
+  }
+  .nav-links{
+    position: fixed;
+    background: #f44336;
+    height: 100vh;
+    width:200px;
+    top:0;
+    right:-200;
+    text-align: center;
+    z-index: 2;
+    transition:1s;
+  }
+  nav .fa{
+    display:block;
+    color:#fff;
+    margin:10px;
+    font-size: 22px;
+    cursor: pointer;
+
+  }
+  .nav-links ul {
+    padding: 30px;
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.clock {
+  border-radius: 50%;
+  background: #fff url(https://cssanimation.rocks/images/posts/clocks/ios_clock.svg) no-repeat center;
+  background-size: 88%;
+  height: 20em;
+  padding-bottom: 31%;
+  position: relative;
+  width: 20em;
+}
+
+.clock.simple:after {
+  background: #000;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 5%;
+  height: 5%;
+  z-index: 10;
+}
+.minutes-container, .hours-container, .seconds-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hours {
+  background: #000;
+  height: 20%;
+  left: 48.75%;
+  position: absolute;
+  top: 30%;
+  transform-origin: 50% 100%;
+  width: 2.5%;
+  animation-duration: 10s;
+}
+.minutes {
+  background: #000;
+  height: 40%;
+  left: 49%;
+  position: absolute;
+  top: 10%;
+  transform-origin: 50% 100%;
+  width: 2%;
+}
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.hours-container {
+  animation: rotate 60s infinite linear;
+}
+.minutes-container {
+  animation: rotate 10s infinite linear;
+}

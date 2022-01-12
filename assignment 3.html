@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="with=device-width, initial-scale =1.0">
+    <title>Assignment 3</title>
+    <link rel= "stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Shippori+Antique&family=Shippori+Antique+B1&family=Shippori+Mincho+B1:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+  </head>
+  <body>
+    <section class="header">
+      <<nav>
+
+        <div class="nav-links" id="navlinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="https://www.w3schools.com/graphics/canvas_clock_start.asp">more info</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-sort-desc" onclick="showMenu()"></i>
+
+      </nav>
+    <div class="text-box" align="right">
+      <h1>
+        </h1>
+      <p style="color:White">We have a working Clock on HTML, allow me to demonstrate:
+      <a href="https://www.w3schools.com/graphics/canvas_clock_start.asp" style="color:yellow">Click for more info</a></p>
+      <a href="https://www.w3schools.com/graphics/canvas_clock_start.asp" class="hero-btn">You shall be demonstrated!</a>
+
+    </div>
+
+    </section>
+
+
+    <!---------Clock------------>
+    <article class="clock">
+    <div class="hours-container">
+      <div class="hours"></div>
+    </div>
+    <div class="minutes-container">
+      <div class="minutes"></div>
+    </div>
+  </article>
+  </div>
+
+<!-------------Javascript for toggle menu------------->
+    <script>
+      var navlinks= document.getElementById("navlinks");
+
+      function showMenu(){
+        navlinks.style.right="0";
+      }
+      function hideMenu(){
+        navlinks.style.right="-200px";
+      }
+
+    </script>
+
+
+  </body>
+</html>
